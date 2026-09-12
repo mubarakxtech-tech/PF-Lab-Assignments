@@ -1,40 +1,44 @@
 #include <stdio.h>
-#include <stdbool.h>
+
 int main()
 {
-    bool obstacle, person;
+    int obstacle, person;
     float battery;
     printf("\nenter battery percentage:");
     scanf("%f", &battery);
     printf("enter wether obstacle is detected or not (1 for detected, 0 for not detected): ");
     scanf("%d", &obstacle);
-    if (obstacle == true)
+    if (obstacle == 1)
     {
         printf("obstacle detected");
     }
-    else if (obstacle == false)
+    else if (obstacle == 0)
     {
         printf("\nno obstacle detected");
     }
     printf("\nenter wether person is detected or not (1 for detected, 0 for not detected): ");
     scanf("%d", &person);
-    if (person == true)
+    if (person == 1)
     {
         printf("\nperson detected");
     }
-    else if (person == false)
+    else if (person == 0)
     {
         printf("\nno person detected");
     }
-
-    if (obstacle == true && person == true)
+    if (obstacle == 1)
     {
-        printf("\n emergency stop");
+        if (person == 1)
+        {
+            printf("\nEmergency Stop\n");
+        }
+        else
+        {
+            printf("\nChange Direction\n");
+        }
     }
     else
     {
-        printf("\n change direction");
-
         if (battery <= 20.0)
         {
             printf("\n return to charging station");
@@ -44,5 +48,7 @@ int main()
             printf("\n continue operating");
         }
     }
-    return 0;
+return 0;
 }
+
+
