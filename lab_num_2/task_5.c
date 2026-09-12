@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <string.h>
 int main()
 {
     char role[20];
     int security_level;
-    bool acc_status;
+    int acc_status;
     printf("Ai system access control");
     printf("\nonly for admins,students,researchers");
     printf("\nEnter the account status (1 for active, 0 for inactive): ");
@@ -15,7 +14,7 @@ int main()
         printf("Invalid input for account status");
         return 0;
     }
-    if (acc_status == false)
+    if (acc_status == 0)
     {
         printf("Account is inactive. Access denied.");
         return 0;
