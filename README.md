@@ -21,23 +21,25 @@ To compile and run any assignment using GCC in PowerShell:
 ```powershell
 gcc lab_num/assing_1.c -o lab_num/assing_1.exe; .\lab_num\assing_1.exe
 # PF -LAb-Assinments
-# C Programming Lab Assignments (PF-Lab-2)
+# C Programming Lab Assignments (PF-Lab)
 
-This repository contains my weekly lab tasks and programming assignments for Programming Fundamentals (PF). All programs are written in standard C, focusing on type safety, strict conditional logic flow, and clean development practices.
+This repository contains my weekly lab tasks and programming assignments for Programming Fundamentals (PF). All programs are written in standard C.
 
-## Repository Structure (`lab_num_2/`)
+## Lab Assignments Overview
 
-- **`task_1.c`** - Greatest of Three Numbers: Reads three numbers, compares them using conditional statements, handles equality cases, and displays the greatest value.
-- **`task_2.c`** - AI Confidence Score Classifier: Evaluates confidence scores between 0 and 100, handling validation and categorizing them into Low, Moderate, or High confidence.
-- **`task_3.c`** - Dataset Quality Checker: Analyzes dataset records, missing entries, and duplicate counts to classify dataset readiness for machine learning training.
-- **`task_4.c`** - AI Model Deployment Checker: Evaluates model accuracy, prediction latency, and approval status against specific deployment criteria.
-- **`task_5.c`** - Access-Control System: Enforces security levels and role-based access control (Admin, Researcher, Student) alongside account status verification.
-- **`task_6.c`** - Autonomous Robot Sensor Logic: Processes obstacle detection, human presence, and battery levels to trigger safety responses or routine navigation.
-- **`task_7.c`** - Data Usage & Discount Calculator: Computes basic data costs and applies tiered volume-based discounts for machine learning workstation usage.
+| Assignment | File Path | Description |
+| :--- | :--- | :--- |
+| Assignment 1 | `lab_num_2/task_1.c` | Greatest of three numbers with equality handling |
+| Assignment 2 | `lab_num_2/task_2.c` | AI confidence score classifier (0-100 ranges) |
+| Assignment 3 | `lab_num_2/task_3.c` | Dataset quality checker for missing and duplicate records |
+| Assignment 4 | `lab_num_2/task_4.c` | AI model deployment checker based on accuracy, latency, and approval |
+| Assignment 5 | `lab_num_2/task_5.c` | Access-control system for roles (Admin, Researcher, Student) and security levels |
+| Assignment 6 | `lab_num_2/task_6.c` | Autonomous robot sensor logic for obstacles, people, and battery |
+| Assignment 7 | `lab_num_2/task_7.c` | Monthly data usage and tiered discount calculator |
 
-## How to Compile and Run
+## Setup & Execution
 
-You can compile and run any task using `gcc` via your terminal:
+To compile and run any assignment using GCC in PowerShell:
 
 ```bash
 gcc lab_num_2/task_7.c -o task_7
