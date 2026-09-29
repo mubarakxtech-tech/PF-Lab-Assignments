@@ -39,7 +39,7 @@ gcc <folder_name>/<filename.c> -o <output_name>
 # Lab 3 Assignments Overview
 
 | Assignment | File Path | Description |
-|---|---|---|
+| :--- | :--- | :--- |
 | Assignment 1 | `lab_num_3/task_1.c` | University student performance evaluator based on subject marks and attendance. |
 | Assignment 2 | `lab_num_3/task_2.c` | Financial loan evaluation system using nested decision rules and thresholds. |
 | Assignment 3 | `lab_num_3/task_3.c` | Image classification menu system utilizing nested switch-case structures. |
