@@ -66,3 +66,46 @@ gcc task_1.c -o task_1
 # Compile math-dependent programs (Assignments 9 and 10)
 gcc task_9.c -o task_9 -lm
 .\task_9.exe
+# Programming Fundamentals (PF) - Lab 06
+**National University of Computer and Emerging Sciences (FAST-NUCES)**
+
+This repository contains the completed lab tasks for **Lab 06: Introduction to Iterative Structures (Loops) and 1D Arrays**[cite: 1].
+
+---
+
+## 📋 Lab Objectives & Topics Covered
+* **Control Flow & Loops**: Automating repetitive tasks using `for`, `while`, and `do-while` loops[cite: 1].
+* **Dynamic Input & Digit Manipulation**: Processing individual digits using modulus (`%`) and division (`/`) operators[cite: 1].
+* **1D Arrays & Character Arrays**: Declaring, traversing, modifying, searching, inserting, and deleting elements in arrays[cite: 1].
+
+---
+
+## 📝 Lab Tasks Overview
+
+| Task | Description | Core Concept |
+| :--- | :--- | :--- |
+| **Q1** | Verify if the sum of digits of a 4-digit PIN is greater than 10 (Strong vs. Weak PIN)[cite: 1]. | `while` loop, digit extraction |
+| **Q2** | Reverse ticket numbers entered by the user[cite: 1]. | `while` loop, math accumulation |
+| **Q3** | Count present and absent students out of 15 attendees[cite: 1]. | `for` loop, conditional counting |
+| **Q4** | Check whether a library book code number is a palindrome[cite: 1]. | Number reversal comparison |
+| **Q5** | Print the $n$-th Catalan number using a sequence formula[cite: 1]. | Iterative calculation |
+| **Q6** | Count even and odd digits in electricity meter readings[cite: 1]. | Modulo check per digit |
+| **Q7** | Print an LED banner shaped like a hollow diamond[cite: 1]. | Nested loops, boundary logic |
+| **Q8** | Comprehensive 1D array management (Min/Max, Search, Insertion, Deletion)[cite: 1]. | Array manipulation algorithms |
+| **Q9** | Character array word analysis (Length, Reverse, Palindrome, Vowel/Consonant count)[cite: 1]. | Strings / Char arrays |
+
+---
+
+## ⚙️ How to Compile and Run
+
+Make sure you have GCC installed. Open your terminal in the respective lab folder and run:
+
+```bash
+# To compile a specific task (e.g., task_1.c)
+gcc task_1.c -o task_1
+
+# To execute on Windows (PowerShell / Command Prompt)
+.\task_1.exe
+
+# To execute on Linux / macOS
+./task_1
