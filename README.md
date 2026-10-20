@@ -109,3 +109,23 @@ gcc task_1.c -o task_1
 
 # To execute on Linux / macOS
 ./task_1
+# Programming Fundamentals - Lab 07
+**National University of Computer and Emerging Sciences (FAST-NUCES)**[cite: 1]
+
+## Overview
+This repository contains solutions for Lab 07, covering **Nested Loops and N-Dimensional Arrays (2D & 3D arrays)** in C programming[cite: 1].
+
+## Repository Structure
+* `task_1.c` - Student Registration System (Multi-word names & average calculations)[cite: 1]
+* `task_2.c` - CSV Log Parser and Uppercase Counter[cite: 1]
+* `task_3.c` - Encrypted Message Filter & Word Count[cite: 1]
+* `task_4.c` - 3x3 Word Grid Longest Word Evaluator[cite: 1]
+* `task_5.c` - Sentence Parsing & Vowel Density Analyzer[cite: 1]
+* `task_6.c` - Factory Shift Log Row Insertion[cite: 1]
+* `task_7.c` - Environmental Sensor Matrix Column Deletion[cite: 1]
+
+## How to Compile and Run
+To compile any task manually using GCC via the terminal:
+```bash
+gcc task_1.c -o task_1.exe
+./task_1.exe   # Use .\task_1.exe on Windows PowerShell/CMD
