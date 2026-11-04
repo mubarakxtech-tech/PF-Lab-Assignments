@@ -129,3 +129,12 @@ To compile any task manually using GCC via the terminal:
 ```bash
 gcc task_1.c -o task_1.exe
 ./task_1.exe   # Use .\task_1.exe on Windows PowerShell/CMD
+## Lab 09: Introduction to Functions and Pointers
+
+| Task | Description | Source Code | Terminal Output |
+| :--- | :--- | :---: | :---: |
+| **Task 1** | Calculate final bill with membership discounts (Platinum 20%, Gold 10%, Standard 5% + bonus 2% over 10k), 15% tax, and shipping using `calculateDiscount()` and `calculateFinalBill()`. | [task_1.c](./lab_num_9/task_1.c) | ![Task 1 Output](./lab_num_9/task_1.png) |
+| **Task 2** | ATM transaction simulator (debit/credit) passing balance pointers to `withdraw()` and `deposit()` functions with insufficient funds check. | [task_2.c](./lab_num_9/task_2.c) | ![Task 2 Output](./lab_num_9/task_2.png) |
+| **Task 3** | Digital image brightness modifier for a 3x3 matrix using `int (*ptr)[3]` and exclusive pointer arithmetic (no array bracket notation). | [task_3.c](./lab_num_9/task_3.c) | ![Task 3 Output](./lab_num_9/task_3.png) |
+| **Task 4** | Function pointer demonstrator passing `add()`, `multiply()`, and `findMax()` directly as arguments to a `compute()` master function. | [task_4.c](./lab_num_9/task_4.c) | ![Task 4 Output](./lab_num_9/task_4.png) |
+| **Task 5** | Generic Smart Home IoT sensor data system using `printSensorData()` with `void*` pointer casting for float (temperature), int (motion), and char (door lock status). | [task_5.c](./lab_num_9/task_5.c) | ![Task 5 Output](./lab_num_9/task_5.png) |
