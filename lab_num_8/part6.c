@@ -1,26 +1,33 @@
 #include <stdio.h>
+#include <string.h>
 
-struct Address {
-    char City[30];
-    int  ZipCode;
-    char State[30];
-};
+#define TOLL_RATE 50   /* or: const int TOLL_RATE = 50; */
 
-struct Student {
-    int   RollNo;
-    char  Name[50];
-    float CGPA;
-    struct Address studentAddress;   /* nested member */
-};
+void processVehicle(char vehicleType[]) {
+    static int totalVehicles = 0;   /* initialised once, survive between calls */
+    static int totalToll     = 0;
+
+    if (strcmp(vehicleType, "REPORT") == 0) {      /* special call: print the report */
+        printf("\n===== TOLL PLAZA COLLECTION REPORT =====\n");
+        printf("Toll rate per vehicle : %d PKR\n", TOLL_RATE);
+        printf("Total vehicles passed : %d\n", totalVehicles);
+        printf("Total revenue         : %d PKR\n", totalToll);
+        printf("========================================\n");
+        return;
+    }
+
+    totalVehicles++;
+    totalToll += TOLL_RATE;
+    printf("%-8s paid %d PKR | vehicles so far: %d | collected so far: %d PKR\n",
+           vehicleType, TOLL_RATE, totalVehicles, totalToll);
+}
 
 int main(void) {
-    struct Student student1 = {26017, "Mubarak", 3.50f, {"Karachi", 75030, "Sindh"}};
-
-    printf("Roll No : %d\n", student1.RollNo);
-    printf("Name    : %s\n", student1.Name);
-    printf("CGPA    : %.2f\n", student1.CGPA);
-    printf("City    : %s\n", student1.studentAddress.City);
-    printf("Zip Code: %d\n", student1.studentAddress.ZipCode);
-    printf("State   : %s\n", student1.studentAddress.State);
+    processVehicle("Car");
+    processVehicle("Bus");
+    processVehicle("Truck");
+    processVehicle("Car");
+    processVehicle("Bike");
+    processVehicle("REPORT");
     return 0;
 }

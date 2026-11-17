@@ -1,29 +1,26 @@
 #include <stdio.h>
 
-struct Product {
-    int   id;
-    char  name[50];
-    char  category[30];
-    float price;
-    int   stock;
+struct Address {
+    char City[30];
+    int  ZipCode;
+    char State[30];
 };
-typedef struct Product Product;
 
-void displayProductDetails(Product p) {
-    float discount   = p.price * 0.05f;
-    float finalPrice = p.price - discount;
-    printf("ID: %d\n", p.id);
-    printf("Name: %s\n", p.name);
-    printf("Category: %s\n", p.category);
-    printf("Original Price: %.2f\n", p.price);
-    printf("Final Price (5%% off): %.2f\n", finalPrice);
-    printf("Stock: %d\n\n", p.stock);
-}
+struct Student {
+    int   RollNo;
+    char  Name[50];
+    float CGPA;
+    struct Address studentAddress;   /* nested member */
+};
 
 int main(void) {
-    Product p1 = {101, "Wireless Mouse", "Electronics", 2500.0f, 40};
-    Product p2 = {102, "Notebook A4",    "Stationery",   350.0f, 200};
-    displayProductDetails(p1);
-    displayProductDetails(p2);
+    struct Student student1 = {26017, "Mubarak", 3.50f, {"Karachi", 75030, "Sindh"}};
+
+    printf("Roll No : %d\n", student1.RollNo);
+    printf("Name    : %s\n", student1.Name);
+    printf("CGPA    : %.2f\n", student1.CGPA);
+    printf("City    : %s\n", student1.studentAddress.City);
+    printf("Zip Code: %d\n", student1.studentAddress.ZipCode);
+    printf("State   : %s\n", student1.studentAddress.State);
     return 0;
 }

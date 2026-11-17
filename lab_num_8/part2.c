@@ -1,24 +1,29 @@
-#include<stdio.h>
-#include<string.h>
-void reversestring(char str[],int right,int left) {
-if(left<right) {
-    char temp = str[left];
-    str[left] = str[right];
-    str[right] = temp;
-    reversestring(str, right - 1, left + 1);
-}
+#include <stdio.h>
+
+struct Product {
+    int   id;
+    char  name[50];
+    char  category[30];
+    float price;
+    int   stock;
+};
+typedef struct Product Product;
+
+void displayProductDetails(Product p) {
+    float discount   = p.price * 0.05f;
+    float finalPrice = p.price - discount;
+    printf("ID: %d\n", p.id);
+    printf("Name: %s\n", p.name);
+    printf("Category: %s\n", p.category);
+    printf("Original Price: %.2f\n", p.price);
+    printf("Final Price (5%% off): %.2f\n", finalPrice);
+    printf("Stock: %d\n\n", p.stock);
 }
 
-char *stringrev(char str[]) {
-    int s = strlen(str);
-     reverseHelper(s, 0, (int)strlen(s) - 1);
-    return str;
-}
-int main(){
-    printf("Enter a string: ");
-    char str[100];
-    fgets(str, sizeof(str),stdin);  
-    str[strcspn(str, "\n")] = '\0';  // Remove newline character
-    printf("Reversed: %s\n", stringrev(str));
+int main(void) {
+    Product p1 = {101, "Wireless Mouse", "Electronics", 2500.0f, 40};
+    Product p2 = {102, "Notebook A4",    "Stationery",   350.0f, 200};
+    displayProductDetails(p1);
+    displayProductDetails(p2);
     return 0;
 }
