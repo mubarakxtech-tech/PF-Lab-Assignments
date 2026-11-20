@@ -138,3 +138,63 @@ gcc task_1.c -o task_1.exe
 | **Task 3** | Digital image brightness modifier for a 3x3 matrix using `int (*ptr)[3]` and exclusive pointer arithmetic (no array bracket notation). | [task_3.c](./lab_num_9/task_3.c) | ![Task 3 Output](./lab_num_9/task_3.png) |
 | **Task 4** | Function pointer demonstrator passing `add()`, `multiply()`, and `findMax()` directly as arguments to a `compute()` master function. | [task_4.c](./lab_num_9/task_4.c) | ![Task 4 Output](./lab_num_9/task_4.png) |
 | **Task 5** | Generic Smart Home IoT sensor data system using `printSensorData()` with `void*` pointer casting for float (temperature), int (motion), and char (door lock status). | [task_5.c](./lab_num_9/task_5.c) | ![Task 5 Output](./lab_num_9/task_5.png) |
+# CL1002 Programming Fundamentals — Lab Tasks
+
+Lab exercises and practice programs from **CL1002 Programming Fundamentals** at the **National University of Computer and Emerging Sciences (Fall 2026)** covering recursion, structures, strings, file handling, and dynamic memory allocation (DMA)[cite: 1, 2, 4].
+
+## Overview
+
+This repository organizes tasks from the PF lab handouts:
+- **PF Lab 10** (`PF Lab 10.docx`): Recursion, structures, nested structures, structure pointers, and `const` / `static` variables[cite: 4].
+- **PF Lab 10 — Strings & File Handling** (`PF Lab 10  (1).docx`): Standard string functions, 2D character arrays, and text file I/O.
+- **PF Lab 11** (`PF Lab 11.docx`): Dynamic memory allocation (`malloc`, `calloc`, `realloc`, `free`) and pointer management[cite: 1].
+
+---
+
+## Lab Tasks Breakdown
+
+### 1. PF Lab 10 — Recursion, Structures, `const` & `static`
+
+| # | Topic | Description | Key Concepts |
+| :- | :--- | :--- | :--- |
+| 1 | **Transaction Checksum** | Recursively sums digits of a transaction ID until a single-digit digital root remains (e.g., `9875` → `2`)[cite: 4]. | Recursion, base & recursive cases[cite: 4] |
+| 2 | **Product Catalog** | Stores product details (`ID`, `Name`, `Category`, `Price`, `Stock`) and prints the final price after a 5% discount[cite: 4]. | `struct`, dot (`.`) operator[cite: 4] |
+| 3 | **Warehouse Inventory** | Stores 5 `Item` records (`ID`, `Name`, `Quantity`, `UnitPrice`), computes total inventory value, and searches by Item ID[cite: 4]. | Array of structures, linear search[cite: 4] |
+| 4 | **Student Profile & Address** | Combines `Student` and `Address` (`City`, `ZipCode`, `State`) using a separate nested structure and displays full profiles[cite: 4]. | Separate nested structures[cite: 4] |
+| 5 | **Hospital Emergency Record** | Uses an embedded `PatientInfo` struct inside `HospitalRecord` and accesses fields through a structure pointer[cite: 4]. | Embedded nested struct, `->` and `.` operators[cite: 4] |
+| 6 | **Highway Toll Booth** | Uses a fixed `50` PKR toll rate and tracks total vehicles and revenue across calls in `processVehicle()`[cite: 4]. | `const` / `#define`, `static` local variables[cite: 4] |
+
+---
+
+### 2. PF Lab 10 — Strings, 2D Char Arrays & File Handling
+
+| # | Topic | Description | Key Concepts |
+| :- | :--- | :--- | :--- |
+| 1 | **Feedback Sentiment & Sanitizer** | Reads feedback with `fgets()`, counts characters, detects `"good"` or `"bad"`, and replaces `"bad"` with `"not good"`[cite: 2]. | `fgets()`, `strlen()`, `strstr()`, `strcpy()`, `strcat()`, `strncat()`[cite: 2] |
+| 2 | **Alphabetical Student Roster** | Reads 10 student names into a `10x50` char array and sorts them A–Z using Bubble Sort[cite: 2]. | 2D `char` array, `strcmp()`, `strcpy()`[cite: 2] |
+| 3 | **Email Domain Extractor** | Checks an email address for `'@'`, reports invalid format if missing, or extracts and prints the domain[cite: 2]. | `strchr()`, `strcpy()`[cite: 2] |
+| 4 | **ATM Transaction Logger** | Prompts for customer name, account number, and withdrawal amount, then appends entries to `bank_log.txt`[cite: 2]. | `fopen(..., "a")`, `fprintf()`, `fclose()`, `NULL` check[cite: 2] |
+| 5 | **Student Marks Report** | Reads `RollNo`, `Name`, and `Marks` from `marks.txt` until `EOF` and prints a formatted table[cite: 2]. | `fopen(..., "r")`, `fscanf()`, `EOF` loop[cite: 2] |
+| 6 | **Workstation Authentication** | Prompts for username and password, reads `credentials.txt`, and prints `"Access Granted!"` or `"Access Denied!"`[cite: 2]. | File reading, `strcmp()`[cite: 2] |
+
+---
+
+### 3. PF Lab 11 — Dynamic Memory Allocation (DMA)
+
+| # | Topic | Description | Key Concepts |
+| :- | :--- | :--- | :--- |
+| 1 | **Bookstore Stock Tracker** | Dynamically allocates stock counts for `N` categories, displays total, average, and lowest-stock index, and supports updates[cite: 1]. | `malloc()`, `free()`, array updates[cite: 1] |
+| 2 | **Student Feedback Analyzer** | Dynamically grows/allocates feedback strings, counts total characters, and finds the longest entry via pointer traversal[cite: 1]. | `realloc()`, `malloc()`, pointer traversal, `free()`[cite: 1] |
+| 3 | **Username Filter** | Dynamically allocates a pointer array and `N` username strings, filters out names with digits (`0–9`), and prints alphabetic ones[cite: 1]. | Pointer-to-pointer allocation, `containsDigit(char *str)`, `free()`[cite: 1] |
+| 4 | **Movie Category Ratings** | Allocates rating counts for `N` categories, computes total, average, and highest-rated category, and allows updates[cite: 1]. | Dynamic `int` array, updates, `free()`[cite: 1] |
+| 5 | **Password Pattern Similarity** | Allocates memory for a target pattern and participant attempts, scores ASCII character-category match, and highlights the best match[cite: 1]. | DMA for strings, ASCII category comparison, `free()`[cite: 1] |
+
+---
+
+## Building & Running
+
+Compile any `.c` file using `gcc` with warnings enabled:
+
+```bash
+gcc -Wall -Wextra -std=c11 <program_file.c> -o <output_name>
+./<output_name>
