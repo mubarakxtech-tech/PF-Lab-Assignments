@@ -153,7 +153,7 @@ This repository organizes tasks from the PF lab handouts:
 
 ## Lab Tasks Breakdown
 
-### 1. PF Lab 10 — Recursion, Structures, `const` & `static`
+### 1. PF Lab 11 — Recursion, Structures, `const` & `static`
 
 | # | Topic | Description | Key Concepts |
 | :- | :--- | :--- | :--- |
@@ -179,7 +179,7 @@ This repository organizes tasks from the PF lab handouts:
 
 ---
 
-### 3. PF Lab 11 — Dynamic Memory Allocation (DMA)
+### 3. PF Lab 12 — Dynamic Memory Allocation (DMA)
 
 | # | Topic | Description | Key Concepts |
 | :- | :--- | :--- | :--- |
